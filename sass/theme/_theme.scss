@@ -1,1 +1,307 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------- Font Family -------------------------------*/
+
+
+
+@font-face {
+	font-family: Bold;
+	src:url('../../resources/fonts/BCSans-Bold.woff')
+}
+
+@font-face {
+	font-family: BoldItalic;
+	src: url('../../resources/fonts/BCSans-BoldItalic.woff');
+}
+
+@font-face {
+	font-family: Italic;
+	src: url('../../resources/fonts/BCSans-Italic.woff');
+}
+
+@font-face {
+	font-family: Regular;
+	src: url('../../resources/fonts/BCSans-Regular.woff');
+}
+
+/*---------------------StickyHeader------------------------------*/
+/*
+    .header {
+    padding: 10px 16px;
+    background: #555;
+    color: $var2;
+}
+*/
+
+#hamitems .dropdown-menu * {
+	font-family: Regular;
+	color: grey;
+	font-size: 12px;
+}
+
+/*
+    #hamitems .dropdown-content:hover  .dropdown-menu {
+  
+    display: flex;
+*/
+
+.header {
+	.user-nav {
+		padding: 15px 15px;
+		background: $var3;
+		color: $var2;
+
+		.header-links {
+			margin-bottom: 18px;
+
+			.main-link {
+				font-family: Bold;
+			}
+		}
+
+		a {
+			margin-left: 8px;
+			margin-right: 8px;
+			float: left;
+			color: white;
+			text-decoration: none;
+			font-size: 17px;
+		}
+	}
+
+	.bc-nav {
+		padding-top: 1.5em;
+		background: $var4;
+
+		img {
+			padding-left: 2em;
+			width: 450px;
+			height: 80px;
+		}
+	}
+}
+
+.content {
+	padding: 16px;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	+ .content {
+		padding-top: 102px;
+	}
+}
+
+.hamnav .nav-link {
+	font-family: Bold;
+	color: $var3;
+}
+
+#hamitems a:hover {
+	background: $var5;
+	color: white;
+}
+
+@media screen and (max-width: 500px) {
+	.header a {
+		float: none;
+		display: block;
+	}
+}
+
+/*
+.mycontent-right {
+    border-left: 1px solid $var3;
+}
+
+.mycontent-middle {
+    border-left: 1px solid $var3;
+}
+    */
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+
+#hamnav {
+	width: 100%;
+	/* Optional */
+	position: sticky;
+	top: 0;
+
+	label {
+		display: none;
+	}
+}
+
+/* Hide Hamburger */
+
+#hamburger {
+	display: none;
+}
+
+/* Horizontal Menu Items #hamitems {
+    display: flex;
+} 
+*/
+
+#hamitems a {
+	/* width: 20%;*/
+	/* 100% / 5 tabs = 20% */
+	font-family: Bold;
+	color: $var3;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+
+	&:hover {
+	}
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px) {
+	/* Show Hamburger Icon */
+
+	#hamnav label {
+		display: inline-block;
+		color: $var3;
+		font-style: normal;
+		font-size: 1.2em;
+		padding: 10px;
+	}
+
+	/* Break down menu items into vertical */
+
+	#hamitems {
+		a {
+			width: 10%;
+			box-sizing: border-box;
+			display: block;
+			/* width: 100%;*/
+			/* border-top: 1px solid #333;*/
+		}
+
+		display: none;
+	}
+
+	/* Toggle Show/Hide Menu */
+
+	#hamnav input:checked ~ #hamitems {
+		display: block;
+	}
+}
+
+/* On Tablets*/
+
+@media screen and (max-width: 992px) {
+	/* Show Hamburger Icon */
+
+	#hamnav label {
+		display: inline-block;
+		color: $var3;
+		font-family: Bold;
+		font-style: normal;
+		font-size: 1.2em;
+		padding: 10px;
+	}
+
+	/* Break down menu items into vertical */
+
+	#hamitems {
+		a {
+			width: 30em;
+			display: block;
+			/* box-sizing: border-box;
+      display: block;
+          width: 100%;*/
+			/* border-top: 1px solid #333;*/
+		}
+
+		display: none;
+	}
+
+	/* Toggle Show/Hide Menu */
+
+	#hamnav input:checked ~ #hamitems {
+		display: block;
+	}
+}
+
+/* [DOES NOT MATTER] */
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+}
+
+/*------------Footer----------------------*/
+
+.footer {
+	border-top: 1px solid grey;
+
+	a img {
+		width: 160px;
+		height: 90px;
+		margin-bottom:-45px;
+	}
+
+	.bc-nav {
+	}
+
+	.footer-links a {
+		font-family: Bold;
+		color: $var3;
+		margin-left: 20px;
+	}
+
+	.user-nav {
+		background: $var3;
+		color: white;
+		margin-top:30px;
+	}
+}
+
+/*  .footer .bc-nav a {
+    
+    margin-top:-80px;
+    margin-right:10px;
+    font-family: Bold;
+    color: $var3;
+    padding:4px;
+    
+}
+  */
+
+@media screen and (max-width: 992px) {
+	/* Break down menu items into vertical */
+
+	.footer .footer-links a {
+		font-size: 14px;
+		padding: 5px 22px;
+		border-bottom: 1px solid white;
+		display: block;
+		background: $var7;
+		font-family: Regular;
+		/* box-sizing: border-box;
+    display: block;
+        width: 100%;*/
+		/* border-top: 1px solid #333;*/
+	}
+
+	.footer .bc-nav a img {
+		margin-left:150px;
+		margin-bottom:0.5px;
+	}
+
+	.footer .user-nav{
+		margin-top:-0.5px;
+	}
+
+	/* Toggle Show/Hide Menu */
+}
